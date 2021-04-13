@@ -2,7 +2,7 @@ require("./bootstrap");
 
 import moment from "moment";
 import VueRouter from "vue-router";
-import Vuex from "vuex";
+import Vuex from 'vuex';
 import Index from "./Index";
 import router from "./routes";
 import FatalError from "./shared/components/FatalError";
@@ -30,5 +30,8 @@ const app = new Vue({
     store,
     components: {
         index: Index
-    }
+    },
+    beforeCreate() {
+        this.$store.dispatch("loadStoredState");
+    },
 });
