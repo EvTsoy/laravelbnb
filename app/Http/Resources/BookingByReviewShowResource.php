@@ -18,7 +18,7 @@ class BookingByReviewShowResource extends JsonResource
             'booking_id' => $this->id,
             'from' => $this->from,
             'to' => $this->to,
-            'bookable' => new BookingByReviewBookableShowResource($this->bookable)
+            'bookable' => new BookingByReviewBookableShowResource($this->bookable),
         ];
     }
 }
